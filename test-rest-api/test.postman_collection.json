@@ -1,0 +1,1236 @@
+{
+	"info": {
+		"_postman_id": "b90938fe-4e7d-4e4b-9eac-84b5ebd9f3f7",
+		"name": "Test petsAndPetOwners - the whole CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create 100 petOwners",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let testData = [{",
+							"  \"firstName\": \"Graig\",",
+							"  \"lastName\": \"Corradino\",",
+							"  \"email\": \"gcorradino0@google.com.au\"",
+							"}, {",
+							"  \"firstName\": \"Evered\",",
+							"  \"lastName\": \"Keener\",",
+							"  \"email\": \"ekeener1@bizjournals.com\"",
+							"}, {",
+							"  \"firstName\": \"Jamie\",",
+							"  \"lastName\": \"Roz\",",
+							"  \"email\": \"jroz2@paypal.com\"",
+							"}, {",
+							"  \"firstName\": \"Abelard\",",
+							"  \"lastName\": \"Mechan\",",
+							"  \"email\": \"amechan3@facebook.com\"",
+							"}, {",
+							"  \"firstName\": \"Hendrika\",",
+							"  \"lastName\": \"Ashurst\",",
+							"  \"email\": \"hashurst4@yolasite.com\"",
+							"}, {",
+							"  \"firstName\": \"Teresina\",",
+							"  \"lastName\": \"Samper\",",
+							"  \"email\": \"tsamper5@omniture.com\"",
+							"}, {",
+							"  \"firstName\": \"Wildon\",",
+							"  \"lastName\": \"Plaschke\",",
+							"  \"email\": \"wplaschke6@flickr.com\"",
+							"}, {",
+							"  \"firstName\": \"Wes\",",
+							"  \"lastName\": \"Ding\",",
+							"  \"email\": \"wding7@hc360.com\"",
+							"}, {",
+							"  \"firstName\": \"Colline\",",
+							"  \"lastName\": \"Font\",",
+							"  \"email\": \"cfont8@myspace.com\"",
+							"}, {",
+							"  \"firstName\": \"Griff\",",
+							"  \"lastName\": \"Cluitt\",",
+							"  \"email\": \"gcluitt9@hubpages.com\"",
+							"}, {",
+							"  \"firstName\": \"Tersina\",",
+							"  \"lastName\": \"Scott\",",
+							"  \"email\": \"tscotta@themeforest.net\"",
+							"}, {",
+							"  \"firstName\": \"Fidelity\",",
+							"  \"lastName\": \"Lehrer\",",
+							"  \"email\": \"flehrerb@godaddy.com\"",
+							"}, {",
+							"  \"firstName\": \"Gretal\",",
+							"  \"lastName\": \"Beever\",",
+							"  \"email\": \"gbeeverc@sciencedaily.com\"",
+							"}, {",
+							"  \"firstName\": \"Lynn\",",
+							"  \"lastName\": \"Bruck\",",
+							"  \"email\": \"lbruckd@list-manage.com\"",
+							"}, {",
+							"  \"firstName\": \"Arlee\",",
+							"  \"lastName\": \"Linfoot\",",
+							"  \"email\": \"alinfoote@twitter.com\"",
+							"}, {",
+							"  \"firstName\": \"Elianore\",",
+							"  \"lastName\": \"Niblock\",",
+							"  \"email\": \"eniblockf@bloglines.com\"",
+							"}, {",
+							"  \"firstName\": \"Amandy\",",
+							"  \"lastName\": \"Upwood\",",
+							"  \"email\": \"aupwoodg@istockphoto.com\"",
+							"}, {",
+							"  \"firstName\": \"Smith\",",
+							"  \"lastName\": \"Spini\",",
+							"  \"email\": \"sspinih@1und1.de\"",
+							"}, {",
+							"  \"firstName\": \"Woodman\",",
+							"  \"lastName\": \"Rault\",",
+							"  \"email\": \"wraulti@theglobeandmail.com\"",
+							"}, {",
+							"  \"firstName\": \"Corey\",",
+							"  \"lastName\": \"Girodias\",",
+							"  \"email\": \"cgirodiasj@sina.com.cn\"",
+							"}, {",
+							"  \"firstName\": \"Nehemiah\",",
+							"  \"lastName\": \"Casseldine\",",
+							"  \"email\": \"ncasseldinek@wp.com\"",
+							"}, {",
+							"  \"firstName\": \"Codie\",",
+							"  \"lastName\": \"O'Neal\",",
+							"  \"email\": \"coneall@marriott.com\"",
+							"}, {",
+							"  \"firstName\": \"Phylys\",",
+							"  \"lastName\": \"Nevett\",",
+							"  \"email\": \"pnevettm@goo.ne.jp\"",
+							"}, {",
+							"  \"firstName\": \"Blayne\",",
+							"  \"lastName\": \"Tripon\",",
+							"  \"email\": \"btriponn@pinterest.com\"",
+							"}, {",
+							"  \"firstName\": \"Obadiah\",",
+							"  \"lastName\": \"Stead\",",
+							"  \"email\": \"osteado@google.com.au\"",
+							"}, {",
+							"  \"firstName\": \"Alfreda\",",
+							"  \"lastName\": \"Lanchbury\",",
+							"  \"email\": \"alanchburyp@ibm.com\"",
+							"}, {",
+							"  \"firstName\": \"Lucia\",",
+							"  \"lastName\": \"Dalyiel\",",
+							"  \"email\": \"ldalyielq@rakuten.co.jp\"",
+							"}, {",
+							"  \"firstName\": \"Merridie\",",
+							"  \"lastName\": \"Tamblingson\",",
+							"  \"email\": \"mtamblingsonr@geocities.com\"",
+							"}, {",
+							"  \"firstName\": \"Arlette\",",
+							"  \"lastName\": \"Abeles\",",
+							"  \"email\": \"aabeless@spiegel.de\"",
+							"}, {",
+							"  \"firstName\": \"Gui\",",
+							"  \"lastName\": \"Hawker\",",
+							"  \"email\": \"ghawkert@shutterfly.com\"",
+							"}, {",
+							"  \"firstName\": \"Michal\",",
+							"  \"lastName\": \"Northern\",",
+							"  \"email\": \"mnorthernu@mozilla.com\"",
+							"}, {",
+							"  \"firstName\": \"Max\",",
+							"  \"lastName\": \"Anfonsi\",",
+							"  \"email\": \"manfonsiv@dmoz.org\"",
+							"}, {",
+							"  \"firstName\": \"Antoinette\",",
+							"  \"lastName\": \"Cribbins\",",
+							"  \"email\": \"acribbinsw@list-manage.com\"",
+							"}, {",
+							"  \"firstName\": \"Orson\",",
+							"  \"lastName\": \"Twiggins\",",
+							"  \"email\": \"otwigginsx@51.la\"",
+							"}, {",
+							"  \"firstName\": \"Coleman\",",
+							"  \"lastName\": \"Parr\",",
+							"  \"email\": \"cparry@yale.edu\"",
+							"}, {",
+							"  \"firstName\": \"Kiley\",",
+							"  \"lastName\": \"Stace\",",
+							"  \"email\": \"kstacez@economist.com\"",
+							"}, {",
+							"  \"firstName\": \"Fenelia\",",
+							"  \"lastName\": \"Backshill\",",
+							"  \"email\": \"fbackshill10@cornell.edu\"",
+							"}, {",
+							"  \"firstName\": \"Dion\",",
+							"  \"lastName\": \"O'Bruen\",",
+							"  \"email\": \"dobruen11@list-manage.com\"",
+							"}, {",
+							"  \"firstName\": \"Obie\",",
+							"  \"lastName\": \"Gurrado\",",
+							"  \"email\": \"ogurrado12@goodreads.com\"",
+							"}, {",
+							"  \"firstName\": \"Bent\",",
+							"  \"lastName\": \"Iohananof\",",
+							"  \"email\": \"biohananof13@bizjournals.com\"",
+							"}, {",
+							"  \"firstName\": \"Read\",",
+							"  \"lastName\": \"Mulheron\",",
+							"  \"email\": \"rmulheron14@webnode.com\"",
+							"}, {",
+							"  \"firstName\": \"Aurelie\",",
+							"  \"lastName\": \"Vipan\",",
+							"  \"email\": \"avipan15@pagesperso-orange.fr\"",
+							"}, {",
+							"  \"firstName\": \"Eada\",",
+							"  \"lastName\": \"Sorel\",",
+							"  \"email\": \"esorel16@pen.io\"",
+							"}, {",
+							"  \"firstName\": \"Raquel\",",
+							"  \"lastName\": \"Rylance\",",
+							"  \"email\": \"rrylance17@goodreads.com\"",
+							"}, {",
+							"  \"firstName\": \"Elias\",",
+							"  \"lastName\": \"Davydochkin\",",
+							"  \"email\": \"edavydochkin18@usda.gov\"",
+							"}, {",
+							"  \"firstName\": \"Merilyn\",",
+							"  \"lastName\": \"Reightley\",",
+							"  \"email\": \"mreightley19@skyrock.com\"",
+							"}, {",
+							"  \"firstName\": \"Raymund\",",
+							"  \"lastName\": \"Patron\",",
+							"  \"email\": \"rpatron1a@hatena.ne.jp\"",
+							"}, {",
+							"  \"firstName\": \"Carolann\",",
+							"  \"lastName\": \"Bess\",",
+							"  \"email\": \"cbess1b@reference.com\"",
+							"}, {",
+							"  \"firstName\": \"Cristian\",",
+							"  \"lastName\": \"Frie\",",
+							"  \"email\": \"cfrie1c@gizmodo.com\"",
+							"}, {",
+							"  \"firstName\": \"Iosep\",",
+							"  \"lastName\": \"Eilles\",",
+							"  \"email\": \"ieilles1d@opensource.org\"",
+							"}, {",
+							"  \"firstName\": \"Myer\",",
+							"  \"lastName\": \"Toms\",",
+							"  \"email\": \"mtoms1e@fda.gov\"",
+							"}, {",
+							"  \"firstName\": \"Bob\",",
+							"  \"lastName\": \"Andriss\",",
+							"  \"email\": \"bandriss1f@virginia.edu\"",
+							"}, {",
+							"  \"firstName\": \"Andrus\",",
+							"  \"lastName\": \"Cassedy\",",
+							"  \"email\": \"acassedy1g@networksolutions.com\"",
+							"}, {",
+							"  \"firstName\": \"Nisse\",",
+							"  \"lastName\": \"Nani\",",
+							"  \"email\": \"nnani1h@blog.com\"",
+							"}, {",
+							"  \"firstName\": \"Shandeigh\",",
+							"  \"lastName\": \"Jacketts\",",
+							"  \"email\": \"sjacketts1i@hp.com\"",
+							"}, {",
+							"  \"firstName\": \"Meryl\",",
+							"  \"lastName\": \"Mattschas\",",
+							"  \"email\": \"mmattschas1j@nationalgeographic.com\"",
+							"}, {",
+							"  \"firstName\": \"Xerxes\",",
+							"  \"lastName\": \"Pestor\",",
+							"  \"email\": \"xpestor1k@vimeo.com\"",
+							"}, {",
+							"  \"firstName\": \"Matelda\",",
+							"  \"lastName\": \"Mancer\",",
+							"  \"email\": \"mmancer1l@wikispaces.com\"",
+							"}, {",
+							"  \"firstName\": \"Ambrosio\",",
+							"  \"lastName\": \"Sunderland\",",
+							"  \"email\": \"asunderland1m@ow.ly\"",
+							"}, {",
+							"  \"firstName\": \"Nickola\",",
+							"  \"lastName\": \"Mangham\",",
+							"  \"email\": \"nmangham1n@mediafire.com\"",
+							"}, {",
+							"  \"firstName\": \"Annice\",",
+							"  \"lastName\": \"Cooley\",",
+							"  \"email\": \"acooley1o@twitter.com\"",
+							"}, {",
+							"  \"firstName\": \"Adena\",",
+							"  \"lastName\": \"Ivashinnikov\",",
+							"  \"email\": \"aivashinnikov1p@dyndns.org\"",
+							"}, {",
+							"  \"firstName\": \"Michaella\",",
+							"  \"lastName\": \"Tuplin\",",
+							"  \"email\": \"mtuplin1q@yale.edu\"",
+							"}, {",
+							"  \"firstName\": \"Elwira\",",
+							"  \"lastName\": \"Fearne\",",
+							"  \"email\": \"efearne1r@netvibes.com\"",
+							"}, {",
+							"  \"firstName\": \"Eda\",",
+							"  \"lastName\": \"Rangeley\",",
+							"  \"email\": \"erangeley1s@yale.edu\"",
+							"}, {",
+							"  \"firstName\": \"Maisey\",",
+							"  \"lastName\": \"Dennidge\",",
+							"  \"email\": \"mdennidge1t@ustream.tv\"",
+							"}, {",
+							"  \"firstName\": \"Lyssa\",",
+							"  \"lastName\": \"Carlick\",",
+							"  \"email\": \"lcarlick1u@nasa.gov\"",
+							"}, {",
+							"  \"firstName\": \"Jerrilyn\",",
+							"  \"lastName\": \"Gething\",",
+							"  \"email\": \"jgething1v@jimdo.com\"",
+							"}, {",
+							"  \"firstName\": \"Raimundo\",",
+							"  \"lastName\": \"Buckston\",",
+							"  \"email\": \"rbuckston1w@typepad.com\"",
+							"}, {",
+							"  \"firstName\": \"Adelheid\",",
+							"  \"lastName\": \"Reignard\",",
+							"  \"email\": \"areignard1x@hexun.com\"",
+							"}, {",
+							"  \"firstName\": \"Mark\",",
+							"  \"lastName\": \"Monkleigh\",",
+							"  \"email\": \"mmonkleigh1y@msu.edu\"",
+							"}, {",
+							"  \"firstName\": \"Lilian\",",
+							"  \"lastName\": \"Pietroni\",",
+							"  \"email\": \"lpietroni1z@reddit.com\"",
+							"}, {",
+							"  \"firstName\": \"Moore\",",
+							"  \"lastName\": \"Cakes\",",
+							"  \"email\": \"mcakes20@alibaba.com\"",
+							"}, {",
+							"  \"firstName\": \"Jaclin\",",
+							"  \"lastName\": \"Hearne\",",
+							"  \"email\": \"jhearne21@europa.eu\"",
+							"}, {",
+							"  \"firstName\": \"Gerhardine\",",
+							"  \"lastName\": \"Kilcoyne\",",
+							"  \"email\": \"gkilcoyne22@cpanel.net\"",
+							"}, {",
+							"  \"firstName\": \"Natividad\",",
+							"  \"lastName\": \"Chaplyn\",",
+							"  \"email\": \"nchaplyn23@dion.ne.jp\"",
+							"}, {",
+							"  \"firstName\": \"Gerhardine\",",
+							"  \"lastName\": \"Layzell\",",
+							"  \"email\": \"glayzell24@latimes.com\"",
+							"}, {",
+							"  \"firstName\": \"Jared\",",
+							"  \"lastName\": \"Becket\",",
+							"  \"email\": \"jbecket25@bigcartel.com\"",
+							"}, {",
+							"  \"firstName\": \"Winna\",",
+							"  \"lastName\": \"Macari\",",
+							"  \"email\": \"wmacari26@google.com.au\"",
+							"}, {",
+							"  \"firstName\": \"Lalo\",",
+							"  \"lastName\": \"Hubberstey\",",
+							"  \"email\": \"lhubberstey27@upenn.edu\"",
+							"}, {",
+							"  \"firstName\": \"Torr\",",
+							"  \"lastName\": \"Megany\",",
+							"  \"email\": \"tmegany28@abc.net.au\"",
+							"}, {",
+							"  \"firstName\": \"Yasmeen\",",
+							"  \"lastName\": \"Narrie\",",
+							"  \"email\": \"ynarrie29@privacy.gov.au\"",
+							"}, {",
+							"  \"firstName\": \"Caralie\",",
+							"  \"lastName\": \"Blackstone\",",
+							"  \"email\": \"cblackstone2a@xrea.com\"",
+							"}, {",
+							"  \"firstName\": \"Sigfried\",",
+							"  \"lastName\": \"Ridder\",",
+							"  \"email\": \"sridder2b@jiathis.com\"",
+							"}, {",
+							"  \"firstName\": \"Gelya\",",
+							"  \"lastName\": \"Passmore\",",
+							"  \"email\": \"gpassmore2c@freewebs.com\"",
+							"}, {",
+							"  \"firstName\": \"Jerrylee\",",
+							"  \"lastName\": \"Odlin\",",
+							"  \"email\": \"jodlin2d@slideshare.net\"",
+							"}, {",
+							"  \"firstName\": \"Margaux\",",
+							"  \"lastName\": \"Nabarro\",",
+							"  \"email\": \"mnabarro2e@harvard.edu\"",
+							"}, {",
+							"  \"firstName\": \"Oates\",",
+							"  \"lastName\": \"Abbyss\",",
+							"  \"email\": \"oabbyss2f@statcounter.com\"",
+							"}, {",
+							"  \"firstName\": \"Rozelle\",",
+							"  \"lastName\": \"Fenby\",",
+							"  \"email\": \"rfenby2g@china.com.cn\"",
+							"}, {",
+							"  \"firstName\": \"Tommy\",",
+							"  \"lastName\": \"Tippetts\",",
+							"  \"email\": \"ttippetts2h@reuters.com\"",
+							"}, {",
+							"  \"firstName\": \"Nara\",",
+							"  \"lastName\": \"Kuschel\",",
+							"  \"email\": \"nkuschel2i@bluehost.com\"",
+							"}, {",
+							"  \"firstName\": \"Beniamino\",",
+							"  \"lastName\": \"Kubasek\",",
+							"  \"email\": \"bkubasek2j@eepurl.com\"",
+							"}, {",
+							"  \"firstName\": \"Betteanne\",",
+							"  \"lastName\": \"Ludgrove\",",
+							"  \"email\": \"bludgrove2k@yahoo.co.jp\"",
+							"}, {",
+							"  \"firstName\": \"Hilary\",",
+							"  \"lastName\": \"Kendrew\",",
+							"  \"email\": \"hkendrew2l@microsoft.com\"",
+							"}, {",
+							"  \"firstName\": \"Ranna\",",
+							"  \"lastName\": \"Croasdale\",",
+							"  \"email\": \"rcroasdale2m@disqus.com\"",
+							"}, {",
+							"  \"firstName\": \"Catherina\",",
+							"  \"lastName\": \"Goundsy\",",
+							"  \"email\": \"cgoundsy2n@studiopress.com\"",
+							"}, {",
+							"  \"firstName\": \"Rhiamon\",",
+							"  \"lastName\": \"Tick\",",
+							"  \"email\": \"rtick2o@hatena.ne.jp\"",
+							"}, {",
+							"  \"firstName\": \"Saidee\",",
+							"  \"lastName\": \"Grayshon\",",
+							"  \"email\": \"sgrayshon2p@biglobe.ne.jp\"",
+							"}, {",
+							"  \"firstName\": \"Carr\",",
+							"  \"lastName\": \"Keppin\",",
+							"  \"email\": \"ckeppin2q@un.org\"",
+							"}, {",
+							"  \"firstName\": \"Gasparo\",",
+							"  \"lastName\": \"Ussher\",",
+							"  \"email\": \"gussher2r@blog.com\"",
+							"}];",
+							"",
+							"",
+							"// Add the test data to an environment variable",
+							"// if that environment varaible does not exist",
+							"if(!pm.environment.get(\"mockDataPersons\")){",
+							"    // since environment variables can only be strings",
+							"    // we need to JSON encode the test data too...",
+							"    pm.environment.set(\"mockDataPersons\",JSON.stringify(testData));",
+							"    pm.environment.set(\"counter\", \"0\");",
+							"}",
+							"",
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// Get firstName, lastName and email as separate",
+							"// variables from the person at index counter in",
+							"// the mockDataPersons array ",
+							"let {firstName, lastName, email}= mockDataPersons[counter];",
+							"pm.environment.set('firstName', firstName);",
+							"pm.environment.set('lastName', lastName);",
+							"pm.environment.set('email', email);",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// get the response data",
+							"let response = pm.response.json();",
+							"",
+							"pm.test(\"Check that the database reports 1 change\", function(){",
+							"    pm.expect(response.changes).to.equal(1);",
+							"});",
+							"",
+							"pm.test(\"Check that we get lastInsertRowid as a number\", function(){",
+							"    pm.expect(response.lastInsertRowid).to.be.a('number');",
+							"});",
+							"",
+							"// Add the id to the person in our mock data",
+							"mockDataPersons[counter].id = response.lastInsertRowid;",
+							"// and resave the mock data as an environment variable",
+							"pm.environment.set('mockDataPersons', JSON.stringify(mockDataPersons));",
+							"",
+							"// Add one to the counter and save as environment variable",
+							"counter++;",
+							"pm.environment.set('counter', counter);",
+							"",
+							"// If there exist a peson in mockDataPersons",
+							"// with an index corresponding to the counter",
+							"// then run this request again",
+							"if(mockDataPersons[counter]){",
+							"  postman.setNextRequest(\"Create 100 petOwners\");",
+							"}",
+							"",
+							"else {",
+							"   // we are done reset the counter to 0 ",
+							"   // the help the script in the next request",
+							"   pm.environment.set('counter', '0');",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"{{firstName}}\",\n    \"lastName\": \"{{lastName}}\",\n    \"email\": \"{{email}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/petOwners",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"petOwners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all 100 petOwners at once",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"",
+							"pm.environment.set('numberOfPetOwners', mockDataPersons.length);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"",
+							"let response = pm.response.json();",
+							"",
+							"// Before we can compare reorder the response (that is currentl",
+							"// ordered by descending id - so that is order by ascending id)",
+							"// The simplest to do this is to simply reverse the order",
+							"response = response.reverse();",
+							"",
+							"// Test that the list of petOwners we get from the REST api ar",
+							"// identical to our mockData",
+							"",
+							"pm.test('Check that the data when getting all written petOwners is identical to our mockData', () => {",
+							"    pm.expect(response).to.deep.equal(mockDataPersons);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/petOwners?limit={{numberOfPetOwners}}&order=-id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"petOwners"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "{{numberOfPetOwners}}"
+						},
+						{
+							"key": "order",
+							"value": "-id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the 100 petOwners",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// Get the id of the current mock data person",
+							"let {id} = mockDataPersons[counter];",
+							"// Set the id as an environment variable",
+							"pm.environment.set('id', id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// The response from the db",
+							"let response = pm.response.json();",
+							"",
+							"// The person data we expect in the response",
+							"let expectedPerson = mockDataPersons[counter];",
+							"",
+							"pm.test(\"Check that person data was correclty saved in the db, by reading it and comparing it to the original mockdata\", function(){",
+							"    pm.expect(response).to.deep.equal(expectedPerson);",
+							"} );",
+							"",
+							"// Add one to the counter and save as environment variable",
+							"counter++;",
+							"pm.environment.set('counter', counter);",
+							"",
+							"// If there exist a peson in mockDataPersons",
+							"// with an index corresponding to the counter",
+							"// then run this request again",
+							"if(mockDataPersons[counter]){",
+							"  postman.setNextRequest(\"Get the 100 petOwners\");",
+							"}",
+							"",
+							"else {",
+							"   // we are done reset the counter to 0 ",
+							"   // the help the script in the next request",
+							"   pm.environment.set('counter', '0');",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/petOwners/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"petOwners",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update 100 petOwners",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// Add an s at the end of the properties firstName, lastName and email",
+							"mockDataPersons[counter].firstName += 's';",
+							"mockDataPersons[counter].lastName += 's';",
+							"mockDataPersons[counter].email += 's';",
+							"",
+							"// Save the mockDataPersons back to our environement variable",
+							"pm.environment.set('mockDataPersons', JSON.stringify(mockDataPersons));",
+							"",
+							"// Get the id of the current mock data person",
+							"let {id} = mockDataPersons[counter];",
+							"// Set the id as an environment variable",
+							"pm.environment.set('id', id);",
+							"",
+							"let {firstName, lastName, email}= mockDataPersons[counter];",
+							"pm.environment.set('firstName', firstName);",
+							"pm.environment.set('lastName', lastName);",
+							"pm.environment.set('email', email);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// get the response data",
+							"let response = pm.response.json();",
+							"",
+							"pm.test(\"Check that the database reports 1 change\", function(){",
+							"    pm.expect(response.changes).to.equal(1);",
+							"});",
+							"",
+							"// Add one to the counter and save as environment variable",
+							"counter++;",
+							"pm.environment.set('counter', counter);",
+							"",
+							"// If there exist a peson in mockDataPersons",
+							"// with an index corresponding to the counter",
+							"// then run this request again",
+							"if(mockDataPersons[counter]){",
+							"  postman.setNextRequest(\"Update 100 petOwners\");",
+							"}",
+							"",
+							"else {",
+							"   // we are done reset the counter to 0 ",
+							"   // the help the script in the next request",
+							"   pm.environment.set('counter', '0');",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"{{firstName}}\",\n    \"lastName\": \"{{lastName}}\",\n    \"email\": \"{{email}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/petOwners/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"petOwners",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the 100 petOwners again",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// Get the id of the current mock data person",
+							"let {id} = mockDataPersons[counter];",
+							"// Set the id as an environment variable",
+							"pm.environment.set('id', id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// The response from the db",
+							"let response = pm.response.json();",
+							"",
+							"// The person data we expect in the response",
+							"let expectedPerson = mockDataPersons[counter];",
+							"",
+							"pm.test(\"Check that person data was correclty saved in the db, by reading it and comparing it to the original mockdata\", function(){",
+							"    pm.expect(response).to.deep.equal(expectedPerson);",
+							"} );",
+							"",
+							"// Add one to the counter and save as environment variable",
+							"counter++;",
+							"pm.environment.set('counter', counter);",
+							"",
+							"// If there exist a peson in mockDataPersons",
+							"// with an index corresponding to the counter",
+							"// then run this request again",
+							"if(mockDataPersons[counter]){",
+							"  postman.setNextRequest(\"Get the 100 petOwners again\");",
+							"}",
+							"",
+							"else {",
+							"   // we are done reset the counter to 0 ",
+							"   // the help the script in the next request",
+							"   pm.environment.set('counter', '0');",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/petOwners/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"petOwners",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update 100 petOwners using patch",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// Add an s at the end of the properties firstName, lastName and email",
+							"mockDataPersons[counter].firstName += 's';",
+							"mockDataPersons[counter].lastName += 's';",
+							"mockDataPersons[counter].email += 's';",
+							"",
+							"// Save the mockDataPersons back to our environement variable",
+							"pm.environment.set('mockDataPersons', JSON.stringify(mockDataPersons));",
+							"",
+							"// Get the id of the current mock data person",
+							"let {id} = mockDataPersons[counter];",
+							"// Set the id as an environment variable",
+							"pm.environment.set('id', id);",
+							"",
+							"let {firstName, lastName, email}= mockDataPersons[counter];",
+							"pm.environment.set('firstName', firstName);",
+							"pm.environment.set('lastName', lastName);",
+							"pm.environment.set('email', email);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// get the response data",
+							"let response = pm.response.json();",
+							"",
+							"pm.test(\"Check that the database reports 1 change\", function(){",
+							"    pm.expect(response.changes).to.equal(1);",
+							"});",
+							"",
+							"// Add one to the counter and save as environment variable",
+							"counter++;",
+							"pm.environment.set('counter', counter);",
+							"",
+							"// If there exist a peson in mockDataPersons",
+							"// with an index corresponding to the counter",
+							"// then run this request again",
+							"if(mockDataPersons[counter]){",
+							"  postman.setNextRequest(\"Update 100 petOwners using patch\");",
+							"}",
+							"",
+							"else {",
+							"   // we are done reset the counter to 0 ",
+							"   // the help the script in the next request",
+							"   pm.environment.set('counter', '0');",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"{{firstName}}\",\n    \"lastName\": \"{{lastName}}\",\n    \"email\": \"{{email}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/petOwners/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"petOwners",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the 100 petOwners again after patch",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// Get the id of the current mock data person",
+							"let {id} = mockDataPersons[counter];",
+							"// Set the id as an environment variable",
+							"pm.environment.set('id', id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// The response from the db",
+							"let response = pm.response.json();",
+							"",
+							"// The person data we expect in the response",
+							"let expectedPerson = mockDataPersons[counter];",
+							"",
+							"pm.test(\"Check that person data was correclty saved in the db, by reading it and comparing it to the original mockdata\", function(){",
+							"    pm.expect(response).to.deep.equal(expectedPerson);",
+							"} );",
+							"",
+							"// Add one to the counter and save as environment variable",
+							"counter++;",
+							"pm.environment.set('counter', counter);",
+							"",
+							"// If there exist a peson in mockDataPersons",
+							"// with an index corresponding to the counter",
+							"// then run this request again",
+							"if(mockDataPersons[counter]){",
+							"  postman.setNextRequest(\"Get the 100 petOwners again after patch\");",
+							"}",
+							"",
+							"else {",
+							"   // we are done reset the counter to 0 ",
+							"   // the help the script in the next request",
+							"   pm.environment.set('counter', '0');",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/petOwners/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"petOwners",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete 100 petOwners",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// Get the id of the current mock data person",
+							"let {id} = mockDataPersons[counter];",
+							"// Set the id as an environment variable",
+							"pm.environment.set('id', id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// get the response data",
+							"let response = pm.response.json();",
+							"",
+							"pm.test(\"Check that the database reports 1 change\", function(){",
+							"    pm.expect(response.changes).to.equal(1);",
+							"});",
+							"",
+							"// Add one to the counter and save as environment variable",
+							"counter++;",
+							"pm.environment.set('counter', counter);",
+							"",
+							"// If there exist a peson in mockDataPersons",
+							"// with an index corresponding to the counter",
+							"// then run this request again",
+							"if(mockDataPersons[counter]){",
+							"  postman.setNextRequest(\"Delete 100 petOwners\");",
+							"}",
+							"",
+							"else {",
+							"   // we are done reset the counter to 0 ",
+							"   // the help the script in the next request",
+							"   pm.environment.set('counter', '0');",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/petOwners/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"petOwners",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete 100 non-existing petOwners",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// Get the id of the current mock data person",
+							"let {id} = mockDataPersons[counter];",
+							"// Set the id as an environment variable",
+							"pm.environment.set('id', id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// get the response data",
+							"let response = pm.response.json();",
+							"",
+							"pm.test(\"Check that the database reports 0 changes\", function(){",
+							"    pm.expect(response.changes).to.equal(0);",
+							"});",
+							"",
+							"// Add one to the counter and save as environment variable",
+							"counter++;",
+							"pm.environment.set('counter', counter);",
+							"",
+							"// If there exist a peson in mockDataPersons",
+							"// with an index corresponding to the counter",
+							"// then run this request again",
+							"if(mockDataPersons[counter]){",
+							"  postman.setNextRequest(\"Delete 100 non-existing petOwners\");",
+							"}",
+							"",
+							"else {",
+							"   // we are done reset the counter to 0 ",
+							"   // the help the script in the next request",
+							"   pm.environment.set('counter', '0');",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/petOwners/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"petOwners",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get 100 non-existing petOwners",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// Get the id of the current mock data person",
+							"let {id} = mockDataPersons[counter];",
+							"// Set the id as an environment variable",
+							"pm.environment.set('id', id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// \"Unpack\" environment variables into normal local variables",
+							"let mockDataPersons = JSON.parse(pm.environment.get(\"mockDataPersons\"));",
+							"let counter = +pm.environment.get(\"counter\");",
+							"",
+							"// The response from the db",
+							"let response = pm.response.json();",
+							"",
+							"pm.test(\"Check that the deleted petOwner does not exist\", () => {",
+							"    pm.expect(response.error).to.equal('No such post');",
+							"});",
+							"",
+							"pm.test(\"Check that the response status is 404\", () => {",
+							"    pm.expect(pm.response.code).to.equal(404);",
+							"});",
+							"",
+							"// Add one to the counter and save as environment variable",
+							"counter++;",
+							"pm.environment.set('counter', counter);",
+							"",
+							"// If there exist a peson in mockDataPersons",
+							"// with an index corresponding to the counter",
+							"// then run this request again",
+							"if(mockDataPersons[counter]){",
+							"  postman.setNextRequest(\"Get 100 non-existing petOwners\");",
+							"}",
+							"",
+							"else {",
+							"   // we are done reset the counter to 0 ",
+							"   // the help the script in the next request",
+							"   pm.environment.set('counter', '0');",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/petOwners/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"petOwners",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
