@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Permanent+Marker&display=swap');
+body {
+  font-family: 'Outfit';
+  background-image: url('images/main-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 30px 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Permanent Marker';
+  font-weight: normal;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h3 {
+  text-align: left;
+  margin-top: 5px;
+}
+
+main {
+  background-color: white;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.owner {
+  margin: 20px 0;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: rgb(198, 210, 175);
+  overflow: auto;
+}
+
+.ownerInfo {
+  padding: 0 14px;
+}
+
+.pet {
+  float: left;
+  width: calc(50% - 40px);
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(0,0,0, 0.2);
+}
+
+.pet img {
+  display: block;
+  border-radius: 10px;
+  border: 3px solid rgb(42, 74, 37);
+  width: calc(100% - 6px);
+  height: 200px; /* non-proportional, quick fix */
+}

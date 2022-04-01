@@ -1,0 +1,5 @@
+{
+  "port": 3000,
+  "dbName": "petowners-and-pets.sqlite3",
+  "allowWherePosts": true
+}
